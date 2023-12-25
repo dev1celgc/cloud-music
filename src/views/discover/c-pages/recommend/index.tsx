@@ -4,6 +4,8 @@ import type {FC, ReactNode } from 'react'
 import { useAppDispatch } from "@/store";
 import { fetchBannerDataAction } from "./store/recommend";
 import Slider from "./c-pages/slider";
+import { RecommendWrapper } from "./style";
+import HotRecommend from "./c-pages/hot-recommend";
 interface IProps {
     children?: ReactNode
 }
@@ -41,7 +43,16 @@ const Recommend: FC<IProps> = () => {
 
     return (
     <div>
-        <Slider />
+      <RecommendWrapper>
+      <Slider />
+        <div className="content wrap-v2">
+          <div className="left">
+            <HotRecommend></HotRecommend>
+            left
+          </div>
+          <div className="right">right</div>
+        </div>
+      </RecommendWrapper>
     </div>
     )
 }

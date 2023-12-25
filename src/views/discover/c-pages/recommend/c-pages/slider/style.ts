@@ -40,11 +40,10 @@ export const BannerLeft = styled.div`
         height: 20px;
         background: url(${require('@/assets/img/banner_sprite.png')}) 3px -343px;
         cursor: pointer;
-
         &:hover,
         &.active {
           background-position: -16px -343px;
-          
+
         }
       }
     }
