@@ -5,3 +5,12 @@ export const getBanners = () => {
         url: '/banner'
     })
 }
+
+export const getHotRecommend = (limit = 30) => {
+    return hyRequest.get({
+        url: '/personalized',
+        params: {
+            limit
+        }
+    })
+}

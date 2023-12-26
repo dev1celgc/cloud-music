@@ -65,7 +65,7 @@ export const BannerControl = styled.div`
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-
+  height: 63px;
   .btn {
     border: none;
     position: absolute;

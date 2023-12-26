@@ -16,6 +16,8 @@ export const RecommendWrapper = styled.div`
         margin-left: 1px
         }
      }
+
+     
      
  
 `

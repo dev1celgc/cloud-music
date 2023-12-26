@@ -2,7 +2,7 @@ import React, {memo, useState, useEffect} from "react";
 import type {FC, ReactNode } from 'react'
 // import hyRequest from "@/service";
 import { useAppDispatch } from "@/store";
-import { fetchBannerDataAction } from "./store/recommend";
+import { fetchBannerDataAction, fetchHotRecommendAction } from "./store/recommend";
 import Slider from "./c-pages/slider";
 import { RecommendWrapper } from "./style";
 import HotRecommend from "./c-pages/hot-recommend";
@@ -27,6 +27,7 @@ const Recommend: FC<IProps> = () => {
     const dispatch = useAppDispatch()
     useEffect(() => {
         dispatch(fetchBannerDataAction())
+        dispatch(fetchHotRecommendAction())
     }, [])
     // const [banners, setBanners] = useState<IBannerData[]>([])
 
